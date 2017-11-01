@@ -28,6 +28,7 @@
     <TypeScriptCompile Include="ClientApp\app\components\book-detail\book-detail.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\entities\book.ts" />
     <TypeScriptCompile Include="ClientApp\app\mocks\mock-books.ts" />
+    <TypeScriptCompile Include="ClientApp\app\services\book.service.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

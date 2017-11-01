@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
 import { BookDetailComponent } from "./components/book-detail/book-detail.component";
+import { BookService } from "./services/book.service";
 
 @NgModule({
     declarations: [
@@ -16,6 +17,9 @@ import { BookDetailComponent } from "./components/book-detail/book-detail.compon
         CommonModule,
         HttpModule,
         FormsModule
+    ],
+    providers: [
+        BookService
     ]
 })
 export class AppModuleShared {
