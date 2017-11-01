@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\book-detail\book-detail.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\entities\book.ts" />
     <TypeScriptCompile Include="ClientApp\app\mocks\mock-books.ts" />
   </ItemGroup>

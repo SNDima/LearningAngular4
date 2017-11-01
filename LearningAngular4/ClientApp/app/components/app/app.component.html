@@ -7,13 +7,4 @@
         <span class="badge">{{book.id}}</span> {{book.name}}
     </li>
 </ul>
-<div *ngIf="selectedBook">
-    <h2>{{selectedBook.name}} детали!</h2>
-    <div>
-        <label>Id: </label>{{selectedBook.id}}
-    </div>
-    <div>
-        <label>Название: </label>
-        <input [(ngModel)]="selectedBook.name" placeholder="Название" />
-    </div>
-</div>
+<book-detail [book]="selectedBook"></book-detail>
