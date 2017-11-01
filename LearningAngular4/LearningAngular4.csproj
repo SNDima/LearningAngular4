@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\entities\book.ts" />
+    <TypeScriptCompile Include="ClientApp\app\mocks\mock-books.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
