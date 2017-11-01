@@ -14,4 +14,9 @@ export class BookService {
             setTimeout(() => resolve(this.getBooks()), 2000);
         });
     }
+
+    getBook(id: number): Promise<Book> {
+        return this.getBooks()
+            .then(books => books.find(book => book.id === id));
+    }
 }

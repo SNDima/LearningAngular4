@@ -34,6 +34,10 @@ import { DashboardComponent } from "./components/dashboard/dashboard.component";
             {
                 path: 'dashboard',
                 component: DashboardComponent
+            },
+            {
+                path: 'books/:id',
+                component: BookDetailComponent
             }
         ])
     ],
