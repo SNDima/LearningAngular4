@@ -25,4 +25,8 @@ export class BookDetailComponent implements OnInit {
             .switchMap((params: ParamMap) => this.bookService.getBook(Number(params.get('id'))))
             .subscribe(book => this.book = book);
     }
+
+    goBack(): void {
+        this.location.back();
+    }
 }

@@ -1,8 +1,8 @@
 ﻿<h3>Топ книги</h3>
 <div class="grid grid-pad">
-    <div *ngFor="let book of books" class="col-1-4">
+    <a *ngFor="let book of books" [routerLink]="['/books', book.id]" class="col-1-4">
         <div class="module book">
             <h4>{{book.name}}</h4>
         </div>
-    </div>
+    </a>
 </div>

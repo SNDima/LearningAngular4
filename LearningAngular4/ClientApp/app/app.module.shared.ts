@@ -10,6 +10,8 @@ import { BookDetailComponent } from "./components/book-detail/book-detail.compon
 import { BookService } from "./services/book.service";
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 
+import { AppModuleRouting } from "./app.module.routing";
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -21,25 +23,7 @@ import { DashboardComponent } from "./components/dashboard/dashboard.component";
         CommonModule,
         HttpModule,
         FormsModule,
-        RouterModule.forRoot([
-            {
-                path: '',
-                redirectTo: '/dashboard',
-                pathMatch: 'full'
-            },
-            {
-                path: 'books',
-                component: BooksComponent
-            },
-            {
-                path: 'dashboard',
-                component: DashboardComponent
-            },
-            {
-                path: 'books/:id',
-                component: BookDetailComponent
-            }
-        ])
+        AppModuleRouting
     ],
     providers: [
         BookService
