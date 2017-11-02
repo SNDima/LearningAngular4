@@ -1,4 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Book } from "../../entities/book";
 import { BookService } from "../../services/book.service";
@@ -12,7 +13,10 @@ export class BooksComponent implements OnInit {
     books: Book[];
     selectedBook: Book;
 
-    constructor(private bookService: BookService) { }
+    constructor(
+        private bookService: BookService,
+        private router: Router
+    ) { }
 
     ngOnInit(): void {
         this.getBooks();
@@ -24,5 +28,9 @@ export class BooksComponent implements OnInit {
 
     onSelect(book: Book): void {
         this.selectedBook = book;
+    }
+
+    gotoDetail(): void {
+        this.router.navigate(['/books', this.selectedBook.id]);
     }
 }

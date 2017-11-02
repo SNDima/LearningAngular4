@@ -6,3 +6,9 @@
         <span class="badge">{{book.id}}</span> {{book.name}}
     </li>
 </ul>
+<div *ngIf="selectedBook">
+    <h2>
+        {{selectedBook.name | uppercase}} - лучшая книга!
+    </h2>
+    <button (click)="gotoDetail()">Перейти к деталям</button>
+</div>
