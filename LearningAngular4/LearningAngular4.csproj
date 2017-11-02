@@ -33,7 +33,6 @@
     <TypeScriptCompile Include="ClientApp\app\components\books\books.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\dashboard\dashboard.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\entities\book.ts" />
-    <TypeScriptCompile Include="ClientApp\app\mocks\mock-books.ts" />
     <TypeScriptCompile Include="ClientApp\app\services\book.service.ts" />
   </ItemGroup>
 

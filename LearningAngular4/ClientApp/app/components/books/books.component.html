@@ -6,6 +6,12 @@
         <span class="badge">{{book.id}}</span> {{book.name}}
     </li>
 </ul>
+<div>
+    <label>Название книги:</label> <input #bookName />
+    <button (click)="add(bookName.value); bookName.value=''">
+        Добавить
+    </button>
+</div>
 <div *ngIf="selectedBook">
     <h2>
         {{selectedBook.name | uppercase}} - лучшая книга!

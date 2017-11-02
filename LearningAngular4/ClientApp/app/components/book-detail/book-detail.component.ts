@@ -12,7 +12,7 @@ import { BookService } from "../../services/book.service"
     styleUrls: ['./book-detail.component.css']
 })
 export class BookDetailComponent implements OnInit {
-    book: Book | undefined;
+    book: Book;
 
     constructor(
         private bookService: BookService,
@@ -28,5 +28,10 @@ export class BookDetailComponent implements OnInit {
 
     goBack(): void {
         this.location.back();
+    }
+
+    save(): void {
+        this.bookService.update(this.book)
+            .then(() => this.goBack());
     }
 }
