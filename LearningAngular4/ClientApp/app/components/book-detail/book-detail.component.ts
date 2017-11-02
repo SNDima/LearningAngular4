@@ -12,7 +12,7 @@ import { BookService } from "../../services/book.service"
     styleUrls: ['./book-detail.component.css']
 })
 export class BookDetailComponent implements OnInit {
-    book: Book;
+    book: Book | undefined;
 
     constructor(
         private bookService: BookService,
@@ -22,7 +22,7 @@ export class BookDetailComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.paramMap
-            .switchMap((params: ParamMap) => this.bookService.getBook(+params.get('id')))
+            .switchMap((params: ParamMap) => this.bookService.getBook(Number(params.get('id'))))
             .subscribe(book => this.book = book);
     }
 }

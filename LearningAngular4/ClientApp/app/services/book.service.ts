@@ -15,7 +15,7 @@ export class BookService {
         });
     }
 
-    getBook(id: number): Promise<Book> {
+    getBook(id: number): Promise<Book | undefined> {
         return this.getBooks()
             .then(books => books.find(book => book.id === id));
     }
