@@ -4,6 +4,7 @@
         [class.selected]="book === selectedBook"
         (click)="onSelect(book)">
         <span class="badge">{{book.id}}</span> {{book.name}}
+        <button class="delete" (click)="delete(book); $event.stopPropagation()">x</button>
     </li>
 </ul>
 <div>
@@ -12,7 +13,7 @@
         Добавить
     </button>
 </div>
-<div *ngIf="selectedBook">
+<div *ngIf="selectedBook && selectedBook.id">
     <h2>
         {{selectedBook.name | uppercase}} - лучшая книга!
     </h2>

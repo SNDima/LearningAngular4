@@ -22,17 +22,21 @@
 
   <ItemGroup>
     <None Remove="ClientApp\app\app.module.routing.ts" />
+    <None Remove="ClientApp\app\components\book-search\book-search.component.ts" />
     <None Remove="ClientApp\app\components\books\books.component.ts" />
     <None Remove="ClientApp\app\components\dashboard\dashboard.component.ts" />
     <None Remove="ClientApp\app\entities\book.ts" />
+    <None Remove="ClientApp\app\services\book-search.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\app.module.routing.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\book-detail\book-detail.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\components\book-search\book-search.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\books\books.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\components\dashboard\dashboard.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\entities\book.ts" />
+    <TypeScriptCompile Include="ClientApp\app\services\book-search.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\services\book.service.ts" />
   </ItemGroup>
 

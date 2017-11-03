@@ -42,6 +42,20 @@ namespace LearningAngular4.Controllers
             return book;
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBook(int id)
+        {
+            var book = Books.FirstOrDefault(b => b.Id == id);
+            Books.Remove(book);
+            return Ok();
+        }
+
+        [HttpGet("search/{name}")]
+        public IEnumerable<Book> Search(string name)
+        {
+            return Books.Where(b => b.Name.Contains(name));
+        }
+
         private static List<Book> Books = new List<Book>
         {
             new Book
